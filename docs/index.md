@@ -38,9 +38,3 @@ Will include:
 - Cisco switching and routing
 - Troubleshooting scenarios
 - Home lab setup
-
-### Networking Lab (Coming Soon)
-Will include:
-- Cisco switching and routing
-- Troubleshooting scenarios
-- Home lab setup
