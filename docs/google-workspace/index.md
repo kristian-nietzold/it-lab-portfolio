@@ -1,6 +1,6 @@
 
 
-## Overview
+
 This lab simulates a real small business environment using Google Workspace and demonstrates practical administration skills relevant to IT support and junior system administrator roles.
 
 ---
