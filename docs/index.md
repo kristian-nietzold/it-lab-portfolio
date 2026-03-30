@@ -16,7 +16,7 @@ A practical admin lab covering:
 - Security policies (2FA, restrictions)
 - Gmail and Drive configuration
 
-👉 [View Google Workspace Lab](google-workspace/)
+👉 [View Google Workspace Lab](google-workspace/index.md)
 
 ---
 
