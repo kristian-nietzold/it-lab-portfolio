@@ -1,7 +1,7 @@
 # Google Workspace Admin Lab
 
 ## Overview
-This lab simulates a real small business environment using Google Workspace. It demonstrates practical administration skills relevant to IT support and junior system administrator roles.
+This lab simulates a real small business environment using Google Workspace and demonstrates practical administration skills relevant to IT support and junior system administrator roles.
 
 ---
 
