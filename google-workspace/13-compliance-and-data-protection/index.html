@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance & Data Protection | Google Workspace Lab</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container">
+        <h1 class="logo">Kristian Nietzold</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../index.html">Google Workspace</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2>Compliance & Data Protection</h2>
+        <p>
+            Implementing layered security controls to prevent, detect, and respond to data leakage.
+        </p>
+    </div>
+</section>
+
+<section class="content-modern">
+
+    <!-- OVERVIEW -->
+    <h1>Overview</h1>
+
+    <p>
+        This section demonstrates how data protection controls were implemented in Google Workspace
+        to reduce the risk of data leakage and provide visibility into high-risk user behaviour.
+    </p>
+
+    <div class="callout">
+        <strong>Security model:</strong><br>
+        Prevention → Detection → Alerting
+    </div>
+
+    <!-- ORG BASELINE -->
+    <div class="section-block">
+        <h2>Drive Sharing Controls (Organisational Baseline)</h2>
+
+        <img src="screenshots/13-01-drive-sharing-settings-org-baseline.png" alt="Drive Sharing Org Baseline" loading="lazy">
+        <p class="caption">Default Drive sharing configuration at organisational level</p>
+
+        <h3>Configuration</h3>
+        <ul>
+            <li>External sharing: <strong>Enabled</strong></li>
+            <li>Link sharing: <strong>Restricted</strong></li>
+            <li>Access Checker: <strong>Recipients only</strong></li>
+            <li>External distribution: <strong>Controlled</strong></li>
+        </ul>
+
+        <div class="callout">
+            <strong>Why this matters:</strong><br>
+            Establishes a secure default while still allowing controlled collaboration.
+        </div>
+    </div>
+
+    <!-- FINANCE OU -->
+    <div class="section-block">
+        <h2>Finance OU – Restricted Sharing Policy</h2>
+
+        <img src="screenshots/13-02-drive-sharing-settings-finance-restricted.png" alt="Finance Restricted Sharing" loading="lazy">
+        <p class="caption">Stricter sharing controls applied to Finance organisational unit</p>
+
+        <h3>Configuration</h3>
+        <ul>
+            <li>External sharing: <strong>Disabled</strong></li>
+            <li>Policy override: <strong>Yes</strong></li>
+            <li>Access Checker: <strong>Recipients only</strong></li>
+        </ul>
+
+        <div class="callout">
+            <strong>Real-world scenario:</strong><br>
+            Sensitive financial data is restricted from leaving the organisation to prevent data leaks.
+        </div>
+
+        <h3>Security Impact</h3>
+        <ul>
+            <li>Prevents external data exposure</li>
+            <li>Enforces departmental data boundaries</li>
+            <li>Demonstrates OU-based policy segmentation</li>
+        </ul>
+    </div>
+
+    <!-- DETECTION -->
+    <div class="section-block">
+        <h2>Detection – External Sharing Activity Rule</h2>
+
+        <img src="screenshots/13-03-drive-dlp-rule-conditions.png" alt="DLP Rule Conditions" loading="lazy">
+        <p class="caption">Rule configured to detect external sharing events</p>
+
+        <h3>Rule Logic</h3>
+        <ul>
+            <li>Event: <strong>User sharing permissions change</strong></li>
+            <li>Condition: <strong>Visibility = Shared externally</strong></li>
+        </ul>
+
+        <div class="callout">
+            <strong>Why this matters:</strong><br>
+            Enables real-time detection of potential data leakage.
+        </div>
+    </div>
+
+    <!-- ALERTING -->
+    <div class="section-block">
+        <h2>Alerting Configuration</h2>
+
+        <img src="screenshots/13-04-drive-dlp-rule-actions.png" alt="DLP Rule Actions" loading="lazy">
+        <p class="caption">Alerting configuration for external sharing events</p>
+
+        <h3>Configuration</h3>
+        <ul>
+            <li>Alert Centre: <strong>Enabled</strong></li>
+            <li>Email notifications:
+                <ul>
+                    <li>Super administrators</li>
+                    <li>management@nietz.co.uk</li>
+                </ul>
+            </li>
+            <li>Severity: <strong>High</strong></li>
+            <li>Frequency: <strong>Up to 5 per hour</strong></li>
+        </ul>
+
+        <div class="callout">
+            <strong>Why this matters:</strong><br>
+            Ensures rapid awareness of high-risk activity.
+        </div>
+    </div>
+
+    <!-- RULE ACTIVE -->
+    <div class="section-block">
+        <h2>Rule Activation</h2>
+
+        <img src="screenshots/13-05-drive-dlp-rule-active.png" alt="DLP Rule Active" loading="lazy">
+        <p class="caption">Rule enabled and actively monitoring events</p>
+
+        <ul>
+            <li>Continuous monitoring enabled</li>
+            <li>No manual intervention required</li>
+            <li>Real-time detection active</li>
+        </ul>
+    </div>
+
+    <!-- VALIDATION -->
+    <div class="section-block">
+        <h2>Alert Validation (Test Scenario)</h2>
+
+        <img src="screenshots/13-06-drive-dlp-alert-email.png" alt="DLP Alert Email" loading="lazy">
+        <p class="caption">Alert triggered after external file sharing test</p>
+
+        <h3>Outcome</h3>
+        <ul>
+            <li>User performing the action identified</li>
+            <li>External recipient captured</li>
+            <li>File name and permission change logged</li>
+        </ul>
+
+        <div class="callout">
+            <strong>Key point:</strong><br>
+            End-to-end detection and alerting workflow successfully validated.
+        </div>
+    </div>
+
+    <!-- LIMITATIONS -->
+    <div class="section-block">
+        <h2>Platform Limitations</h2>
+
+        <h3>Data Residency</h3>
+        <ul>
+            <li>Not available on Business Standard</li>
+            <li>Enterprise would allow EU data region control</li>
+        </ul>
+
+        <h3>Data Retention & eDiscovery</h3>
+        <ul>
+            <li>Google Vault not included in this plan</li>
+            <li>Would enable retention policies and legal holds</li>
+        </ul>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="section-block">
+        <h2>Summary</h2>
+
+        <ul>
+            <li>External sharing controlled at organisational level</li>
+            <li>Sensitive departments restricted via OU policies</li>
+            <li>External sharing events monitored in real time</li>
+            <li>Alerts generated automatically for investigation</li>
+        </ul>
+
+        <div class="callout">
+            This implementation demonstrates a real-world approach to preventing,
+            detecting, and responding to data leakage in Google Workspace.
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <a href="../index.html" class="btn">← Back to Google Workspace</a>
+</footer>
+
+</body>
+</html>
