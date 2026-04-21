@@ -28,7 +28,7 @@ Production-style Google Workspace environment simulating a real business setup f
 - Security policies (2FA, admin roles)  
 - Gmail and Drive configuration  
 
-👉 **[View Lab](./docs/00-overview/notes.md)**
+👉 **[View Lab](./docs/google-workspace/00-project-overview/notes.md)**
 
 ---
 
