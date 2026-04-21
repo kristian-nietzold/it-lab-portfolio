@@ -1,6 +1,7 @@
 ---
-layout: page
-title:""
+title: ""
+description: ""
+theme: minima
 ---
 
 # Kristian Nietzold – IT Lab Portfolio
