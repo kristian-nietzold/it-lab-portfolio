@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Reporting & Monitoring"
+nav_exclude: true
+---
+
 \# 12 – Reporting \& Monitoring
 
 
