@@ -23,8 +23,7 @@
     <div class="container">
         <h2>Domain & Email Configuration</h2>
         <p>
-            Configured domain verification, Gmail activation, mail routing,
-            and email authentication controls.
+            Domain verification, Gmail activation, mail routing, and email authentication setup.
         </p>
     </div>
 </section>
@@ -33,17 +32,13 @@
 
     <h1>Overview</h1>
     <p>
-        This section demonstrates the setup of a custom domain with Google Workspace,
-        including DNS verification and secure email configuration.
+        This section demonstrates configuring a custom domain and securing email delivery
+        within Google Workspace.
     </p>
 
     <!-- DOMAIN VERIFICATION -->
     <h2>Domain Verification</h2>
-    <p>
-        Domain ownership was verified using a DNS record provided by Google Workspace.
-        A CNAME record was added in Cloudflare, and after propagation the domain was
-        successfully verified in the Admin Console.
-    </p>
+    <p>Domain ownership was verified using a DNS CNAME record in Cloudflare.</p>
 
     <img src="screenshots/01-01-google-verification-code.png">
     <img src="screenshots/01-02-cloudflare-cname-record.png">
@@ -51,28 +46,20 @@
 
     <!-- GMAIL -->
     <h2>Gmail Activation</h2>
-    <p>
-        Gmail was enabled for the domain after verification, allowing users to send
-        and receive email through Google Workspace.
-    </p>
+    <p>Gmail was enabled for the domain to allow email sending and receiving.</p>
 
     <img src="screenshots/01-04-gmail-activation-prompt.png">
     <img src="screenshots/01-05-gmail-activated.png">
 
     <!-- MX -->
-    <h2>MX Records (Mail Routing)</h2>
-    <p>
-        MX records were configured in Cloudflare to route inbound email to Google’s
-        mail servers.
-    </p>
+    <h2>MX Records</h2>
+    <p>MX records were configured in Cloudflare to route email to Google servers.</p>
 
     <img src="screenshots/01-06-mx-record-cloudflare.png">
 
     <!-- SPF -->
-    <h2>SPF (Sender Policy Framework)</h2>
-    <p>
-        An SPF record was added to define authorised sending servers.
-    </p>
+    <h2>SPF</h2>
+    <p>SPF defines authorised mail servers.</p>
 
     <p><code>v=spf1 include:_spf.google.com ~all</code></p>
 
@@ -80,10 +67,7 @@
 
     <!-- DKIM -->
     <h2>DKIM</h2>
-    <p>
-        DKIM keys were generated in Google Admin and added to Cloudflare DNS,
-        enabling cryptographic signing of outbound email.
-    </p>
+    <p>DKIM signing was enabled to validate outgoing email authenticity.</p>
 
     <img src="screenshots/01-08-dkim-generate-google.png">
     <img src="screenshots/01-09-dkim-txt-cloudflare.png">
@@ -91,19 +75,17 @@
 
     <!-- DMARC -->
     <h2>DMARC</h2>
-    <p>
-        A DMARC policy was configured to monitor and control authentication failures.
-    </p>
+    <p>DMARC policy was added for monitoring and future enforcement.</p>
 
     <img src="screenshots/01-11-dmarc-record.png">
 
     <!-- SUMMARY -->
     <h2>Summary</h2>
     <ul>
-        <li>Verified domain ownership</li>
-        <li>Enabled Gmail</li>
-        <li>Configured MX routing</li>
-        <li>Implemented SPF, DKIM, and DMARC</li>
+        <li>Domain verified via DNS</li>
+        <li>Gmail enabled</li>
+        <li>MX routing configured</li>
+        <li>SPF, DKIM, DMARC implemented</li>
     </ul>
 
 </section>
