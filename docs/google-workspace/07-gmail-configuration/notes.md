@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Gmail Configuration"
+title: ""
 nav_exclude: true
 ---
 
