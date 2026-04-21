@@ -1,7 +1,6 @@
 ---
+layout: page
 title: ""
-description: ""
-theme: minima
 ---
 
 # Kristian Nietzold – IT Lab Portfolio
@@ -16,43 +15,43 @@ This portfolio demonstrates practical experience in configuring, securing, and m
 
 ## Projects
 
-### Google Workspace Lab
+---
+
+### 🔧 Google Workspace Lab
 
 Production-style Google Workspace environment simulating a real business setup from domain verification through to security hardening.
 
 **Key areas:**
-- Organisational Units (OU) design and structure  
-- User provisioning and lifecycle management  
+- Organisational Units (OU) design  
+- User lifecycle management  
 - Group-based access control  
-- Security policies (2FA, admin roles, restrictions)  
-- Gmail and Google Drive configuration  
-- Basic compliance and data handling  
+- Security policies (2FA, admin roles)  
+- Gmail and Drive configuration  
 
-👉 [View Google Workspace Lab](./google-workspace-lab.md)
+👉 **[View Lab](./docs/00-overview/notes.md)**
 
 ---
 
-### Microsoft 365 Lab (Coming Soon)
+### ☁️ Microsoft 365 Lab *(Coming Soon)*
 
 Building a modern enterprise environment using Microsoft cloud technologies.
 
 **Planned coverage:**
-- Entra ID (Azure AD) identity management  
-- Intune device management and policies  
-- Exchange Online configuration  
-- SharePoint and collaboration controls  
+- Entra ID (Azure AD)  
+- Intune device management  
+- Exchange Online  
+- SharePoint  
 
 ---
 
-### Networking Lab (Coming Soon)
+### 🌐 Networking Lab *(Coming Soon)*
 
-Hands-on networking lab focused on real-world troubleshooting and infrastructure setup.
+Hands-on networking lab focused on real-world troubleshooting and infrastructure.
 
 **Planned coverage:**
-- Cisco switching and routing  
-- VLANs and network segmentation  
-- Troubleshooting scenarios  
-- Home lab configuration  
+- Cisco switching & routing  
+- VLANs  
+- Network troubleshooting  
 
 ---
 
@@ -98,6 +97,8 @@ My focus is on moving into an IT support / cloud administration role, with a str
 
 ---
 
+## Contact
 
- 
-
+- Email: kris.nietzold@gmail.com  
+- Website: https://kristian-nietzold.co.uk  
+- LinkedIn: (add your link here)
