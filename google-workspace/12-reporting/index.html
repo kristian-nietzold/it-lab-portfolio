@@ -22,7 +22,7 @@
 <section class="hero">
     <div class="container">
         <h2>Device Management</h2>
-        <p>Securing and managing devices within Google Workspace</p>
+        <p>Securing and managing user devices within Google Workspace</p>
     </div>
 </section>
 
@@ -33,7 +33,7 @@
 
     <p>
         This section demonstrates how device access is secured and managed within
-        Google Workspace using Basic Mobile Device Management.
+        Google Workspace using Basic Mobile Device Management (MDM).
     </p>
 
     <ul>
@@ -44,14 +44,20 @@
     </ul>
 
     <div class="callout">
-        Basic Mobile Device Management provides essential security controls while keeping administration simple.
+        <strong>Key concept</strong><br>
+        Device security is enforced through a combination of identity (2SV) and device compliance.
+    </div>
+
+    <div class="callout">
+        <strong>Note</strong><br>
+        Basic MDM provides essential controls without requiring device agents, making it suitable for BYOD environments.
     </div>
 
     <!-- CONFIG -->
     <div class="section-block">
         <h2>Device Management Configuration</h2>
 
-        <p>Mobile device management was configured using Universal Settings.</p>
+        <p>Mobile device management was configured using universal settings at organisational level.</p>
 
         <img src="screenshots/11-02-mobile-management-basic.png" alt="Mobile management configuration" loading="lazy">
         <p class="caption">Basic mobile management configuration</p>
@@ -62,12 +68,17 @@
             <li>Scope: <strong>Organisation-wide (Nietz Ltd)</strong></li>
         </ul>
 
-        <h4>Capabilities</h4>
+        <h4>Capabilities Enabled</h4>
         <ul>
             <li>Remote account wipe</li>
-            <li>Basic password enforcement</li>
+            <li>Password enforcement</li>
             <li>Device approval tracking</li>
         </ul>
+
+        <div class="callout">
+            <strong>Why this matters</strong><br>
+            Provides baseline protection while keeping deployment simple and scalable.
+        </div>
     </div>
 
     <!-- APPLIED -->
@@ -80,7 +91,7 @@
         <ul>
             <li>Mobile management enforced for all users</li>
             <li>Devices must meet minimum security requirements</li>
-            <li>Admin visibility enabled</li>
+            <li>Administrative visibility enabled</li>
         </ul>
     </div>
 
@@ -89,14 +100,19 @@
         <h2>Policy Enforcement (2-Step Verification)</h2>
 
         <img src="screenshots/11-04-device-blocked-2sv.png" alt="2SV enforcement" loading="lazy">
-        <p class="caption">Device blocked due to missing 2-Step Verification</p>
+        <p class="caption">Access blocked due to missing 2-Step Verification</p>
 
         <h3>Outcome</h3>
         <ul>
             <li>Access automatically blocked</li>
-            <li>User prompted to enable 2SV</li>
+            <li>User required to enable 2SV</li>
             <li>Identity-based access control enforced</li>
         </ul>
+
+        <div class="callout">
+            <strong>Important</strong><br>
+            Device access is tied to identity security — non-compliant users cannot access company data.
+        </div>
     </div>
 
     <!-- ENROLMENT -->
@@ -104,13 +120,18 @@
         <h2>Device Enrolment</h2>
 
         <img src="screenshots/11-05-device-enrolled.png" alt="Device enrolled" loading="lazy">
-        <p class="caption">Device successfully enrolled</p>
+        <p class="caption">Device successfully enrolled after meeting requirements</p>
 
         <ul>
             <li>Status: <strong>Approved</strong></li>
             <li>Ownership: <strong>User-owned (BYOD)</strong></li>
             <li>Active sync confirms connection</li>
         </ul>
+
+        <div class="callout">
+            <strong>Why this matters</strong><br>
+            Ensures only compliant devices can access organisational resources.
+        </div>
     </div>
 
     <!-- INSPECTION -->
@@ -118,7 +139,7 @@
         <h2>Device Inspection</h2>
 
         <img src="screenshots/11-06-device-details.png" alt="Device details" loading="lazy">
-        <p class="caption">Detailed device information</p>
+        <p class="caption">Detailed device information in Admin console</p>
 
         <h3>Available Information</h3>
         <ul>
@@ -129,24 +150,24 @@
             <li>Management level</li>
         </ul>
 
-        <h3>Admin Actions</h3>
+        <h3>Administrative Actions</h3>
         <ul>
-            <li>Block device</li>
-            <li>Wipe account</li>
-            <li>Remove device</li>
+            <li>Block device access</li>
+            <li>Wipe account data</li>
+            <li>Remove device from management</li>
             <li>View audit logs</li>
         </ul>
     </div>
 
-    <!-- OVERVIEW DASHBOARD -->
+    <!-- OVERVIEW -->
     <div class="section-block">
         <h2>Devices Overview</h2>
 
         <img src="screenshots/11-01-devices-overview.png" alt="Devices dashboard" loading="lazy">
-        <p class="caption">Centralised device dashboard</p>
+        <p class="caption">Centralised device management dashboard</p>
 
         <ul>
-            <li>Separation of device categories</li>
+            <li>Separation of mobile, endpoint, and ChromeOS devices</li>
             <li>Managed vs unmanaged visibility</li>
             <li>Centralised policy control</li>
         </ul>
@@ -157,9 +178,9 @@
         <h2>Design Rationale</h2>
 
         <ul>
-            <li><strong>Basic MDM</strong> keeps deployment simple</li>
-            <li><strong>2SV enforcement</strong> ensures secure access</li>
-            <li><strong>BYOD support</strong> balances flexibility and control</li>
+            <li><strong>Basic MDM</strong> reduces complexity while maintaining control</li>
+            <li><strong>2-Step Verification</strong> enforces strong identity security</li>
+            <li><strong>BYOD support</strong> allows flexible working while maintaining governance</li>
         </ul>
     </div>
 
@@ -170,8 +191,8 @@
         <ul>
             <li>Non-compliant devices are blocked</li>
             <li>Compliant devices enrol successfully</li>
-            <li>Real-time device status updates</li>
-            <li>Admin controls function correctly</li>
+            <li>Device status updates in real time</li>
+            <li>Admin actions function correctly</li>
         </ul>
     </div>
 
@@ -180,10 +201,10 @@
         <h2>Real-World Considerations</h2>
 
         <ul>
-            <li>Advanced management needed for company-owned devices</li>
-            <li>Strong identity controls required for BYOD</li>
-            <li>Lifecycle processes must include onboarding and offboarding</li>
-            <li>Policies should scale with organisation growth</li>
+            <li>Advanced MDM required for company-owned devices</li>
+            <li>BYOD environments rely heavily on identity controls</li>
+            <li>Device lifecycle processes must include onboarding and offboarding</li>
+            <li>Policies should scale with organisational growth</li>
         </ul>
     </div>
 
@@ -192,14 +213,14 @@
         <h2>Summary</h2>
 
         <ul>
-            <li>Device management implemented successfully</li>
+            <li>Device management successfully implemented</li>
             <li>Identity and device security integrated</li>
-            <li>Policies validated through testing</li>
-            <li>Full administrative control established</li>
+            <li>Policies validated through real-world testing</li>
+            <li>Centralised administrative control established</li>
         </ul>
 
         <div class="callout">
-            The result is a secure, scalable device management setup that supports modern working environments.
+            This configuration provides a secure and scalable approach to managing user devices in Google Workspace.
         </div>
     </div>
 
