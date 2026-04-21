@@ -49,28 +49,59 @@ body {
     background: #0056b3;
 }
 
-/* PROJECTS */
+/* CONTAINER */
 .container {
     max-width: 1000px;
     margin: auto;
 }
 
+/* PROJECT SECTION */
 .projects {
     padding: 40px 20px;
 }
 
+/* CARD GRID (IMPORTANT) */
 .cards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center; /* optional but recommended */
 }
 
+/* CARD STYLE (FIXED) */
 .card {
     background: white;
     padding: 20px;
     border-radius: 10px;
     flex: 1;
     min-width: 250px;
+
+    text-decoration: none;   /* removes underline */
+    color: black;            /* removes blue */
+    font-weight: bold;
+
+    display: block;          /* whole card clickable */
+    transition: 0.2s;
+}
+
+/* HOVER EFFECT (OPTIONAL BUT RECOMMENDED) */
+.card:hover {
+    transform: translateY(-5px);
+    background: #eaeaea;
+}
+
+/* CONTENT PAGES (for later sections) */
+.content {
+    padding: 40px;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 /* FOOTER */
