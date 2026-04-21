@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Project Overview"
+nav_exclude: true
+---
+
 \# 00. Project Overview
 
 
