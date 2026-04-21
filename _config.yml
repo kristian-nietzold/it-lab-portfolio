@@ -3,6 +3,6 @@ description: ""
 theme: minima
 header_pages: []
 
-# 🔥 THIS IS THE FIX
+
 exclude:
   - docs/*
