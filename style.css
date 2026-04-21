@@ -23,7 +23,7 @@ body {
     text-decoration: none;
 }
 
-/* ✅ FIX 4: Navbar hover effect */
+/* ✅ Hover effect */
 .navbar a:hover {
     text-decoration: underline;
 }
@@ -37,6 +37,12 @@ body {
 
 .hero h2 {
     font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* BUTTON */
@@ -56,7 +62,7 @@ body {
 
 /* CONTAINER */
 .container {
-    max-width: 1000px;
+    max-width: 1100px; /* slightly wider = cleaner layout */
     margin: auto;
 }
 
@@ -89,20 +95,103 @@ body {
     transition: 0.2s;
 }
 
-/* 🔧 FIX: prevent purple visited links */
+/* prevent purple visited */
 .card:link,
 .card:visited {
     color: black;
     text-decoration: none;
 }
 
-/* HOVER EFFECT */
+/* hover */
 .card:hover {
     transform: translateY(-5px);
     background: #eaeaea;
 }
 
-/* CONTENT PAGES */
+/* ========================= */
+/* 🔥 MODERN CONTENT PAGES */
+/* ========================= */
+
+.content-modern {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+/* headings */
+.content-modern h1 {
+    margin-bottom: 20px;
+}
+
+.content-modern h2 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.content-modern h3 {
+    margin-top: 30px;
+}
+
+/* paragraphs */
+.content-modern p {
+    margin-bottom: 20px;
+}
+
+/* lists */
+.content-modern ul {
+    padding-left: 20px;
+}
+
+.content-modern li {
+    margin-bottom: 8px;
+}
+
+/* tables */
+.content-modern table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.content-modern th,
+.content-modern td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-modern th {
+    text-align: left;
+    background: #f0f0f0;
+}
+
+/* 🔥 images (big improvement) */
+.content-modern img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* 🔥 captions */
+.caption {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+/* 🔥 section grouping */
+.section-block {
+    margin-bottom: 50px;
+}
+
+/* LEGACY CONTENT (leave untouched pages safe) */
 .content {
     padding: 40px;
     background: white;
@@ -110,14 +199,8 @@ body {
     border-radius: 10px;
 }
 
-/* IMAGES */
-img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
