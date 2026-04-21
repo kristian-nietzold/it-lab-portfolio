@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Domain & Email Configuration"
+nav_exclude: true
+---
+
 # 01. Domain & Email Configuration
 
 This section demonstrates the setup of a custom domain with Google Workspace, including DNS verification and secure email configuration.
