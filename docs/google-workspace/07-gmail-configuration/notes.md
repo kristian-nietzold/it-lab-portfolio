@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Gmail Configuration"
+nav_exclude: true
+---
+
 \# 07. Gmail Configuration
 
 
