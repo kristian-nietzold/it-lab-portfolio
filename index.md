@@ -101,4 +101,4 @@ My focus is on moving into an IT support / cloud administration role, with a str
 
 - Email: kris.nietzold@gmail.com  
 - Website: https://kristian-nietzold.co.uk  
-- LinkedIn: (add your link here)
+
