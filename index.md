@@ -1,6 +1,6 @@
 ---
-layout: default
-title:
+layout: page
+title:""
 ---
 
 # Kristian Nietzold – IT Lab Portfolio
