@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Devices"
+nav_exclude: true
+---
+
 \# 11 – Devices
 
 
