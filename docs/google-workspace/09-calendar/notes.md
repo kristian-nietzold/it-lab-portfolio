@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Calendar"
+nav_exclude: true
+---
+
 \# 09. Calendar
 
 
