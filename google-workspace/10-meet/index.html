@@ -1,103 +1,145 @@
-# 10. Google Meet
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Meet | Google Workspace Lab</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
 
-## Overview
+<body>
 
-This section demonstrates the configuration of Google Meet to provide secure,
-controlled, and scalable communication across the organisation.
+<header class="navbar">
+    <div class="container">
+        <h1 class="logo">Kristian Nietzold</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../index.html">Google Workspace</a>
+        </nav>
+    </div>
+</header>
 
-The implementation focuses on:
+<section class="hero">
+    <div class="container">
+        <h2>Google Meet Configuration</h2>
+        <p>
+            Secure, controlled, and scalable communication across the organisation.
+        </p>
+    </div>
+</section>
 
-- Secure meeting access and participant control  
-- Host moderation and governance  
-- Safe collaboration with internal and external users  
-- Support for hybrid working environments  
+<section class="content-modern">
 
----
+    <!-- OVERVIEW -->
+    <h1>Overview</h1>
 
-## Meet Safety Settings
+    <p>
+        This section demonstrates the configuration of Google Meet to support secure
+        and controlled communication across the organisation.
+    </p>
 
-Google Meet safety settings were configured at the organisational level to ensure
-consistent behaviour across all meetings.
+    <div class="callout">
+        <strong>Focus areas:</strong><br>
+        Secure access • Host control • Safe external collaboration • Hybrid working support
+    </div>
 
-![Meet safety settings](screenshots/10-01-meet-safety-settings.png)
+    <!-- SETTINGS -->
+    <div class="section-block">
+        <h2>Meet Safety Settings</h2>
 
-### Configuration
+        <img src="screenshots/10-01-meet-safety-settings.png" alt="Meet safety settings" loading="lazy">
+        <p class="caption">Google Meet safety configuration applied at organisational level</p>
 
-- Meeting access: **Allowed (including external meetings)**  
-- Access type: **Trusted (domain-aware access control)**  
+        <h3>Configuration</h3>
 
-- Waiting rooms: **Enabled (lobby control enforced)**  
-- Host management: **Enabled by default**  
+        <ul>
+            <li>Meeting access: <strong>Allowed (including external meetings)</strong></li>
+            <li>Access type: <strong>Trusted</strong></li>
+            <li>Waiting rooms: <strong>Enabled</strong></li>
+            <li>Continuous meeting chat: <strong>Enabled (host controlled)</strong></li>
+            <li>Room check-in: <strong>Enabled</strong></li>
+            <li>External participant warning: <strong>Enabled</strong></li>
 
-- External participant warning: **Enabled**  
-- Incoming call restrictions: **Limited to organisation and contacts**  
+            <li>Screen sharing: <strong>Enabled for all users</strong></li>
+            <li>Polls and Q&A: <strong>Enabled</strong></li>
+            <li>Chat messaging: <strong>Enabled</strong></li>
 
-- Screen sharing: **Enabled for all users**  
-- Chat, Polls, Q&A: **Enabled**  
-- Continuous meeting chat: **Enabled (host-controlled)**  
+            <li>Host management: <strong>Enabled by default</strong></li>
+            <li>Incoming call restrictions: <strong>Limited to organisation and contacts</strong></li>
 
-- Room check-in: **Enabled (for physical meeting spaces)**  
+            <li>Meet Media API: <strong>Enabled</strong></li>
+        </ul>
 
-- Meet Media API: **Enabled (supports third-party integrations)**  
+        <div class="callout">
+            <strong>Why this matters:</strong><br>
+            Ensures consistent, secure meeting behaviour across all users while supporting collaboration.
+        </div>
+    </div>
 
----
+    <!-- DESIGN -->
+    <div class="section-block">
+        <h2>Design Rationale</h2>
 
-## Design Rationale
+        <ul>
+            <li><strong>Waiting rooms</strong> ensure only authorised participants join</li>
+            <li><strong>Host management</strong> provides full control over meetings</li>
+            <li><strong>External warnings</strong> highlight potential risks</li>
+            <li><strong>Trusted access model</strong> balances usability and security</li>
+            <li><strong>Collaboration tools</strong> improve engagement and productivity</li>
+        </ul>
+    </div>
 
-The configuration balances usability with security:
+    <!-- VALIDATION -->
+    <div class="section-block">
+        <h2>Validation</h2>
 
-- **Waiting rooms**
-  - Prevent unauthorised access
-  - Ensure hosts approve participants before entry  
+        <ul>
+            <li>External users placed in waiting rooms when required</li>
+            <li>Hosts must approve participant access</li>
+            <li>External users clearly identified in meetings</li>
+            <li>Host controls function correctly (mute/remove/restrict)</li>
+            <li>Meeting features behave consistently across users</li>
+        </ul>
 
-- **Host management**
-  - Gives hosts full control over meetings  
-  - Allows muting, removing users, and restricting actions  
+        <div class="callout">
+            Configuration tested to confirm secure and predictable behaviour.
+        </div>
+    </div>
 
-- **Trusted access model**
-  - Allows external collaboration while maintaining control  
-  - Reduces friction for legitimate business meetings  
+    <!-- REAL WORLD -->
+    <div class="section-block">
+        <h2>Real-World Considerations</h2>
 
-- **External participant warnings**
-  - Improves awareness of potential risk  
-  - Helps prevent accidental data exposure  
+        <ul>
+            <li>High-security environments may restrict external access completely</li>
+            <li>Screen sharing can be limited to hosts only</li>
+            <li>Host management should always be enforced</li>
+            <li>Policies should align with organisational data protection standards</li>
+            <li>Integration with Google Calendar enables seamless scheduling</li>
+        </ul>
+    </div>
 
-- **Collaboration features (chat, polls, Q&A)**
-  - Improve meeting engagement and productivity  
+    <!-- SUMMARY -->
+    <div class="section-block">
+        <h2>Summary</h2>
 
----
+        <ul>
+            <li>Centralised Meet configuration implemented</li>
+            <li>Secure meeting access and moderation controls enforced</li>
+            <li>External collaboration managed safely</li>
+            <li>Supports hybrid workplace communication</li>
+        </ul>
 
-## Validation
+        <div class="callout">
+            These configurations ensure meetings are secure, manageable, and scalable.
+        </div>
+    </div>
 
-The configuration was tested to ensure:
+</section>
 
-- External users are placed in waiting rooms when required  
-- Hosts must approve participant access  
-- External users are clearly labelled in meetings  
-- Host controls function correctly (mute/remove/restrict actions)  
-- Meeting features behave consistently across users  
+<footer>
+    <a href="../index.html" class="btn">← Back to Google Workspace</a>
+</footer>
 
----
-
-## Real-World Considerations
-
-- High-security environments may:
-  - Restrict external access completely  
-  - Disable screen sharing for non-hosts  
-
-- Host management should always be enforced  
-- Policies should align with organisational data protection requirements  
-- Integration with Google Calendar enables seamless scheduling and joining  
-
----
-
-## Summary
-
-This section demonstrates:
-
-- Centralised Google Meet policy configuration  
-- Secure meeting access and moderation controls  
-- Controlled external collaboration  
-- Support for hybrid workplace communication  
-
-These configurations ensure meetings are secure, manageable, and scalable.
+</body>
+</html>
