@@ -3,14 +3,13 @@
 
 @import "minima";
 
-/* Hide top navigation / weird list */
+/* 🔥 Kill ALL top navigation */
 .site-header {
-  display: none;
+  display: none !important;
 }
 
-/* Hide any stray list that appears at top */
-.page-content > ul:first-of-type {
-  display: none;
+.site-nav {
+  display: none !important;
 }
 
 /* Clean layout */
@@ -20,9 +19,10 @@
   padding: 20px;
 }
 
-/* Better headings */
+/* Better spacing */
 h1 {
   font-size: 42px;
+  margin-bottom: 10px;
 }
 
 h2 {
