@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Compliance & Data Protection"
+nav_exclude: true
+---
+
 # 13 – Compliance & Data Protection
 
 ## Overview
