@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "Compliance & Data Protection"
+title: "User Management
+"
 nav_exclude: true
 ---
 
