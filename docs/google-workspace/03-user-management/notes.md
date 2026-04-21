@@ -1,7 +1,6 @@
 ---
 layout: page
-title: "User Management
-"
+title: "User Management"
 nav_exclude: true
 ---
 
