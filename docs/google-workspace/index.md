@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Google Workspace Lab"
+nav_exclude: true
+---
+
 \# Google Workspace Lab
 
 
