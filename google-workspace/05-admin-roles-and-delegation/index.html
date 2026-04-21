@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Roles & Delegation | Google Workspace Lab</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container">
+        <h1 class="logo">Kristian Nietzold</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../index.html">Google Workspace</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2>Admin Roles & Delegation</h2>
+        <p>
+            Secure delegation of administrative responsibilities using role-based access control (RBAC)
+            and the principle of least privilege.
+        </p>
+    </div>
+</section>
+
+<section class="content-modern">
+
+    <h1>Overview</h1>
+
+    <p>
+        This section demonstrates how administrative roles were used to distribute responsibilities
+        across the organisation while maintaining strict security controls.
+    </p>
+
+    <p>
+        Instead of granting full administrative access, roles were assigned based on job function,
+        ensuring users only receive the permissions required to perform their tasks.
+    </p>
+
+    <div class="callout">
+        <strong>Key concept:</strong><br>
+        Least privilege reduces risk by limiting access to only what is required.
+    </div>
+
+    <!-- PURPOSE -->
+    <div class="section-block">
+        <h2>Purpose of Admin Roles</h2>
+
+        <ul>
+            <li>Delegate administrative tasks without granting full access</li>
+            <li>Reduce security risk by limiting high-level permissions</li>
+            <li>Support scalable management as the organisation grows</li>
+        </ul>
+
+        <div class="callout">
+            This follows a Role-Based Access Control (RBAC) model, which is widely used
+            in enterprise environments.
+        </div>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="section-block">
+        <h2>Admin Roles Overview</h2>
+
+        <img src="screenshots/05-01-admin-roles-overview.png">
+        <p class="caption">Available administrative roles within Google Workspace</p>
+
+        <p>Predefined system roles include:</p>
+
+        <ul>
+            <li>Super Admin</li>
+            <li>Help Desk Admin</li>
+            <li>Groups Admin</li>
+            <li>Reports Admin</li>
+        </ul>
+
+        <p>
+            These roles provide granular control over administrative capabilities.
+        </p>
+    </div>
+
+    <!-- ASSIGNMENT -->
+    <div class="section-block">
+        <h2>Role Assignment</h2>
+
+        <img src="screenshots/05-02-helpdesk-admin.png">
+        <p class="caption">Example of assigning the Help Desk Admin role</p>
+
+        <p>
+            Roles were assigned to users based on their responsibilities within the organisation.
+        </p>
+
+        <ul>
+            <li>Access aligned with job function</li>
+            <li>Responsibilities clearly defined</li>
+            <li>Full admin access restricted</li>
+        </ul>
+    </div>
+
+    <!-- HELPDESK -->
+    <div class="section-block">
+        <h2>Helpdesk Role (Least Privilege Example)</h2>
+
+        <img src="screenshots/05-03-role-helpdesk-permissions.png">
+        <p class="caption">Help Desk Admin privileges showing limited access scope</p>
+
+        <p>
+            The <strong>Help Desk Admin</strong> role was used to support users
+            while restricting access to sensitive configuration settings.
+        </p>
+
+        <ul>
+            <li>View organisational units</li>
+            <li>View users</li>
+            <li>Reset passwords</li>
+        </ul>
+
+        <div class="callout">
+            <strong>Why this matters:</strong><br>
+            Support staff can resolve user issues without risking exposure of critical system settings.
+        </div>
+    </div>
+
+    <!-- SUPER ADMIN -->
+    <div class="section-block">
+        <h2>Super Admin Control</h2>
+
+        <img src="screenshots/05-04-super-admins.png">
+        <p class="caption">Super Admin accounts with full administrative control</p>
+
+        <p>
+            The <strong>Super Admin</strong> role provides full control over the environment.
+        </p>
+
+        <h3>Best Practices Applied</h3>
+
+        <ul>
+            <li>Assigned to a minimal number of trusted users</li>
+            <li>Used only for high-level configuration</li>
+            <li>Not used for daily operations</li>
+        </ul>
+
+        <div class="callout">
+            Limiting Super Admin usage reduces risk of accidental changes,
+            privilege abuse, and security compromise.
+        </div>
+    </div>
+
+    <!-- CUSTOM ROLE -->
+    <div class="section-block">
+        <h2>Custom Role (Advanced Delegation)</h2>
+
+        <img src="screenshots/05-05-custom-role-privileges.png">
+        <p class="caption">Custom role configuration with selected privileges</p>
+
+        <p>
+            A custom role was created: <strong>User Provisioning Admin</strong>
+        </p>
+
+        <p>
+            This role was designed to separate onboarding tasks from user support.
+        </p>
+
+        <ul>
+            <li>Create and manage user accounts</li>
+            <li>Handle onboarding processes</li>
+            <li><strong>Exclude password reset permissions</strong></li>
+        </ul>
+
+        <div class="callout">
+            This enforces separation of duties between provisioning and support teams.
+        </div>
+    </div>
+
+    <!-- CUSTOM ASSIGNMENT -->
+    <div class="section-block">
+        <h2>Custom Role Assignment</h2>
+
+        <img src="screenshots/05-06-custom-role-assigned-admin.png">
+        <p class="caption">Custom role assigned to a designated administrator</p>
+
+        <p>
+            The custom role was assigned to a specific user responsible for onboarding tasks.
+        </p>
+
+        <ul>
+            <li>Clear separation of responsibilities</li>
+            <li>Reduced privilege overlap</li>
+            <li>Improved auditability</li>
+        </ul>
+    </div>
+
+    <!-- MODEL -->
+    <div class="section-block">
+        <h2>Delegation Model</h2>
+
+        <ul>
+            <li><strong>Super Admins</strong> – Full control, limited to trusted users</li>
+            <li><strong>Helpdesk Admins</strong> – User support only</li>
+            <li><strong>User Provisioning Admin</strong> – Account creation without password control</li>
+        </ul>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="section-block">
+        <h2>Security Design</h2>
+
+        <ul>
+            <li>Principle of least privilege</li>
+            <li>Separation of duties</li>
+            <li>Reduced attack surface</li>
+            <li>Controlled access to sensitive functions</li>
+        </ul>
+    </div>
+
+    <!-- GROUP LINK -->
+    <div class="section-block">
+        <h2>Integration with Groups</h2>
+
+        <p>
+            Admin roles can also be assigned to groups, enabling:
+        </p>
+
+        <ul>
+            <li>Centralised role management</li>
+            <li>Automatic permission updates as users join/leave</li>
+            <li>Consistent access control</li>
+        </ul>
+
+        <div class="callout">
+            This complements the RBAC model implemented using Google Groups.
+        </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="section-block">
+        <h2>Summary</h2>
+
+        <ul>
+            <li>Delegated administrative responsibilities securely</li>
+            <li>Used predefined and custom roles</li>
+            <li>Applied least privilege principles</li>
+            <li>Separated high-risk and operational tasks</li>
+        </ul>
+
+        <div class="callout">
+            This results in a secure, scalable, and enterprise-ready administrative model.
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <a href="../index.html" class="btn">← Back to Google Workspace</a>
+</footer>
+
+</body>
+</html>
