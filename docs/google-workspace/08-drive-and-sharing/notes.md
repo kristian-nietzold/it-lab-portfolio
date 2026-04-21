@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "08. Drive & Sharing"
+title: "Drive & Sharing"
 nav_exclude: true
 ---
 
