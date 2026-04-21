@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kristian Nietzold – IT Administrator Portfolio
+title:
 ---
 
 # Kristian Nietzold – IT Lab Portfolio
