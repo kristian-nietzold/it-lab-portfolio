@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kristian Nietzold – IT Lab Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel-2: #1f2937;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #0ea5e9;
+      --border: #334155;
+      --card: #0b1220;
+      --success: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #7dd3fc;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      padding: 72px 0 44px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 6vw, 56px);
+      line-height: 1.08;
+      color: #fff;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--accent-2);
+      color: #fff;
+    }
+
+    .button-primary:hover {
+      background: #0284c7;
+      color: #fff;
+    }
+
+    .button-secondary {
+      border-color: var(--border);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    section {
+      padding: 28px 0 12px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 0 0 18px;
+      color: #fff;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 780px;
+      margin-bottom: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: #fff;
+    }
+
+    .card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #bae6fd;
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid rgba(56, 189, 248, 0.18);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .list li {
+      margin-bottom: 8px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 6px;
+      color: var(--success);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .footer {
+      padding: 36px 0 60px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .small-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 760px) {
+      .card-half {
+        grid-column: span 6;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Kristian Nietzold</div>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#focus">Current Focus</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">IT Administrator Portfolio</div>
+      <h1>Hands-on lab environments for real-world IT administration</h1>
+      <p>
+        I build and document practical labs across Google Workspace, Microsoft 365,
+        and networking to demonstrate identity management, access control, security
+        configuration, troubleshooting, and cloud administration skills.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="docs/google-workspace/00-project-overview/notes.md">View Google Workspace Lab</a>
+        <a class="button button-secondary" href="#projects">See Projects</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="section-intro">
+        Each project is structured like internal documentation, with step-by-step
+        configuration, screenshots, and explanations of why each decision was made.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Google Workspace Lab</h3>
+          <p>
+            Production-style Google Workspace environment simulating a real business
+            setup from domain verification through to security hardening, reporting,
+            and compliance controls.
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">OUs</span>
+            <span class="tag">Users</span>
+            <span class="tag">Groups</span>
+            <span class="tag">Admin Roles</span>
+            <span class="tag">Gmail</span>
+            <span class="tag">Drive</span>
+            <span class="tag">Security</span>
+            <span class="tag">Compliance</span>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <strong>Included areas</strong>
+              <ul class="list">
+                <li>Domain setup, DNS, SPF, DKIM, and DMARC</li>
+                <li>Organisational Unit design and user lifecycle management</li>
+                <li>Group-based access control and delegated admin roles</li>
+                <li>2-Step Verification, password policy, and Gmail security</li>
+                <li>Drive sharing controls, reporting, monitoring, and alerts</li>
+                <li>Compliance and data protection controls for external sharing</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Lab entry points</strong>
+              <ul class="list">
+                <li><a href="docs/google-workspace/00-project-overview/notes.md">00 – Project Overview</a></li>
+                <li><a href="docs/google-workspace/01-domain-and-email-configuration/notes.md">01 – Domain &amp; Email Configuration</a></li>
+                <li><a href="docs/google-workspace/02-organisational-units/notes.md">02 – Organisational Units</a></li>
+                <li><a href="docs/google-workspace/03-user-management/notes.md">03 – User Management</a></li>
+                <li><a href="docs/google-workspace/04-groups-and-access-control/notes.md">04 – Groups &amp; Access Control</a></li>
+                <li><a href="docs/google-workspace/05-admin-roles-and-delegation/notes.md">05 – Admin Roles &amp; Delegation</a></li>
+                <li><a href="docs/google-workspace/06-security-and-authentication/notes.md">06 – Security &amp; Authentication</a></li>
+                <li><a href="docs/google-workspace/07-gmail-security-and-user-controls/notes.md">07 – Gmail Security &amp; User Controls</a></li>
+                <li><a href="docs/google-workspace/08-drive-and-sharing/notes.md">08 – Drive &amp; Sharing</a></li>
+                <li><a href="docs/google-workspace/09-calendar/notes.md">09 – Calendar</a></li>
+                <li><a href="docs/google-workspace/10-google-meet/notes.md">10 – Google Meet</a></li>
+                <li><a href="docs/google-workspace/11-devices/notes.md">11 – Devices</a></li>
+                <li><a href="docs/google-workspace/12-reporting-and-monitoring/notes.md">12 – Reporting &amp; Monitoring</a></li>
+                <li><a href="docs/google-workspace/13-compliance-and-data-protection/notes.md">13 – Compliance &amp; Data Protection</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hero-actions" style="margin-top: 22px;">
+            <a class="button button-primary" href="docs/google-workspace/00-project-overview/notes.md">Open Lab</a>
+          </div>
+        </article>
+
+        <article class="card card-half">
+          <h3>Microsoft 365 Lab</h3>
+          <p>
+            Planned enterprise environment focused on modern Microsoft cloud
+            administration and endpoint management.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Entra ID</span>
+            <span class="tag">Intune</span>
+            <span class="tag">Exchange Online</span>
+            <span class="tag">SharePoint</span>
+          </div>
+          <div class="status">Coming soon</div>
+        </article>
+
+        <article class="card card-half">
+          <h3>Networking Lab</h3>
+          <p>
+            Planned hands-on lab focused on switching, routing, segmentation,
+            and troubleshooting using Cisco-style scenarios.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Cisco</span>
+            <span class="tag">VLANs</span>
+            <span class="tag">Routing</span>
+            <span class="tag">Troubleshooting</span>
+          </div>
+          <div class="status">Coming soon</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>What this portfolio demonstrates</h2>
+      <div class="grid">
+        <div class="card card-half">
+          <h3>Core admin capability</h3>
+          <ul class="list">
+            <li>Identity and access management</li>
+            <li>User provisioning and lifecycle handling</li>
+            <li>Role delegation and least privilege</li>
+            <li>Cloud service configuration</li>
+          </ul>
+        </div>
+        <div class="card card-half">
+          <h3>Security-focused approach</h3>
+          <ul class="list">
+            <li>2FA and authentication policy design</li>
+            <li>External sharing restrictions and detection</li>
+            <li>Email security and phishing control</li>
+            <li>Monitoring, reporting, and incident-style workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus">
+      <h2>Current focus</h2>
+      <p class="section-intro">
+        I’m continuing to build practical admin capability while expanding into Microsoft 365 and networking.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <ul class="list">
+            <li>Completing and polishing the Google Workspace lab</li>
+            <li>Building a Microsoft 365 environment next</li>
+            <li>Preparing for the Associate Google Workspace Administrator certification</li>
+            <li>Developing portfolio projects that reflect real support and admin tasks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="muted">
+          I’m building this portfolio to support a move into IT support and cloud administration roles.
+        </p>
+        <div class="small-links">
+          <a href="mailto:your-email@example.com">Email</a>
+          <a href="https://kristian-nietzold.co.uk">Website</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      Built to demonstrate hands-on IT administration skills through structured, real-world lab environments.
+    </div>
+  </main>
+</body>
+</html>
