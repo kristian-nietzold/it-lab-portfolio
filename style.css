@@ -23,6 +23,11 @@ body {
     text-decoration: none;
 }
 
+/* ✅ FIX 4: Navbar hover effect */
+.navbar a:hover {
+    text-decoration: underline;
+}
+
 /* HERO */
 .hero {
     background: white;
