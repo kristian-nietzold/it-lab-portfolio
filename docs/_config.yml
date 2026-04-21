@@ -1,8 +1,4 @@
-theme: minima
-title: IT Lab Portfolio
+title: Kristian Nietzold – IT Portfolio
 description: Hands-on IT admin labs
-
-show_excerpts: false
-minima:
-  social_links: []
-  footer_content: ""
+theme: minima
+header_pages: []
