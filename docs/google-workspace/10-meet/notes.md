@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Meet"
+nav_exclude: true
+---
+
 \# 10. Google Meet
 
 
