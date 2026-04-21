@@ -1,0 +1,168 @@
+# 11 – Devices
+
+## Overview
+
+This section demonstrates how device access is secured and managed within
+Google Workspace, with a focus on:
+
+- Enforcing security policies on mobile devices  
+- Controlling access based on compliance requirements  
+- Monitoring and managing enrolled devices  
+- Validating policy enforcement through real-world testing  
+
+The implementation uses **Basic Mobile Device Management**, providing essential
+security controls while maintaining a low administrative overhead.
+
+---
+
+## Device Management Configuration
+
+Mobile device management was configured using Universal Settings.
+
+![Mobile management (basic configuration)](screenshots/11-02-mobile-management-basic.png)
+
+### Configuration
+
+- Management level: **Basic (agentless)**  
+- Scope: **Organisation-wide (Nietz Ltd)**  
+
+- Capabilities enabled:
+  - Remote account wipe  
+  - Basic password enforcement  
+  - Device approval tracking  
+
+---
+
+## Configuration Applied
+
+The settings were saved and applied across the organisation.
+
+![Mobile management (applied settings)](screenshots/11-03-mobile-management-saved.png)
+
+### Result
+
+- Mobile management enforced for all users  
+- Devices must meet minimum security requirements  
+- Admin visibility into all connected devices enabled  
+
+---
+
+## Policy Enforcement (2-Step Verification)
+
+A sign-in attempt was made from a device that did not meet the organisation’s
+2-Step Verification (2SV) policy.
+
+![Device blocked due to 2SV policy](screenshots/11-04-device-blocked-2sv.png)
+
+### Outcome
+
+- Access was **automatically blocked**  
+- User prompted to meet 2SV requirements  
+- Demonstrates enforcement of **identity-based access control**  
+
+---
+
+## Device Enrolment
+
+After meeting security requirements, the device successfully enrolled.
+
+![Device enrolled](screenshots/11-05-device-enrolled.png)
+
+### Observations
+
+- Device linked to user account  
+- Status: **Approved**  
+- Ownership: **User-owned (BYOD)**  
+- Sync activity confirms active connection  
+
+---
+
+## Device Inspection
+
+Detailed device information was reviewed in the Admin console.
+
+![Device details](screenshots/11-06-device-details.png)
+
+### Available Information
+
+- Device ID and resource ID  
+- Operating system (Android 14)  
+- Ownership type (User-owned)  
+- First and last sync timestamps  
+- Management level applied  
+
+### Admin Actions
+
+- Block device access  
+- Wipe work account  
+- Remove device from management  
+- View audit logs  
+
+---
+
+## Devices Overview
+
+The Devices dashboard provides a centralised view of all managed devices.
+
+![Devices overview](screenshots/11-01-devices-overview.png)
+
+### Insights
+
+- Separation of device categories (mobile, endpoints, ChromeOS)  
+- Visibility into managed vs unmanaged devices  
+- Centralised control for device policies  
+
+---
+
+## Design Rationale
+
+The configuration balances usability with security:
+
+- **Basic MDM**
+  - Provides essential controls without requiring device agents  
+  - Suitable for BYOD environments  
+
+- **2-Step Verification enforcement**
+  - Ensures only secure devices can access company data  
+  - Prevents unauthorised access  
+
+- **BYOD support**
+  - Allows flexibility for users  
+  - Maintains control via account-level policies  
+
+---
+
+## Validation
+
+The configuration was validated through real-world testing:
+
+- Non-compliant devices are blocked  
+- Compliant devices successfully enrol  
+- Device status updates in real time  
+- Admin controls (wipe, block, audit) function correctly  
+
+---
+
+## Real-World Considerations
+
+- Advanced management may be required for company-owned devices  
+- BYOD environments require strong identity controls (e.g. 2SV, MFA)  
+- Device lifecycle processes should include:
+  - Onboarding (enrolment)  
+  - Offboarding (account wipe)  
+
+- Policies should scale as the organisation grows  
+
+---
+
+## Summary
+
+This section demonstrates:
+
+- Practical implementation of device management  
+- Integration of identity and device security  
+- Real-world validation of access control policies  
+- Administrative control over user devices in Google Workspace  
+
+The result is a secure and manageable device environment that supports modern,
+flexible working practices.
