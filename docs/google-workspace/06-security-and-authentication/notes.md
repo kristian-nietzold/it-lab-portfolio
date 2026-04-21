@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Security & Authentication"
+nav_exclude: true
+---
+
 \# 06. Security \& Authentication
 
 
