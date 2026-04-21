@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devices | Google Workspace Lab</title>
+    <title>Reporting & Monitoring | Google Workspace Lab</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
 
@@ -21,209 +21,246 @@
 
 <section class="hero">
     <div class="container">
-        <h2>Device Management</h2>
-        <p>Securing and managing user devices within Google Workspace</p>
+        <h2>Reporting & Monitoring</h2>
+        <p>
+            Auditing user activity, account posture, email delivery, and file sharing across Google Workspace.
+        </p>
     </div>
 </section>
 
-<section class="content-modern">
+<section class="content-modern docs-page">
 
-    <!-- OVERVIEW -->
-    <h1>Overview</h1>
+    <aside class="docs-toc">
+        <div class="docs-toc-box">
+            <h4>On this page</h4>
+            <a href="#overview">Overview</a>
+            <a href="#user-activity-monitoring">User Activity Monitoring</a>
+            <a href="#account-security-posture">Account Security Posture</a>
+            <a href="#application-storage-usage">Application & Storage Usage</a>
+            <a href="#email-investigation">Email Investigation</a>
+            <a href="#email-message-trace">Email Message Trace</a>
+            <a href="#drive-activity-monitoring">Drive Activity Monitoring</a>
+            <a href="#external-sharing-investigation">External Sharing Investigation</a>
+            <a href="#key-security-capabilities">Key Security Capabilities</a>
+            <a href="#validation">Validation</a>
+            <a href="#real-world-considerations">Real-World Considerations</a>
+            <a href="#summary">Summary</a>
+        </div>
+    </aside>
 
-    <p>
-        This section demonstrates how device access is secured and managed within
-        Google Workspace using Basic Mobile Device Management (MDM).
-    </p>
+    <main class="docs-content">
 
-    <ul>
-        <li>Enforcing security policies on mobile devices</li>
-        <li>Controlling access based on compliance requirements</li>
-        <li>Monitoring and managing enrolled devices</li>
-        <li>Validating policy enforcement through real-world testing</li>
-    </ul>
-
-    <div class="callout">
-        <strong>Key concept</strong><br>
-        Device security is enforced through a combination of identity (2SV) and device compliance.
-    </div>
-
-    <div class="callout">
-        <strong>Note</strong><br>
-        Basic MDM provides essential controls without requiring device agents, making it suitable for BYOD environments.
-    </div>
-
-    <!-- CONFIG -->
-    <div class="section-block">
-        <h2>Device Management Configuration</h2>
-
-        <p>Mobile device management was configured using universal settings at organisational level.</p>
-
-        <img src="screenshots/11-02-mobile-management-basic.png" alt="Mobile management configuration" loading="lazy">
-        <p class="caption">Basic mobile management configuration</p>
-
-        <h3>Configuration</h3>
-        <ul>
-            <li>Management level: <strong>Basic (agentless)</strong></li>
-            <li>Scope: <strong>Organisation-wide (Nietz Ltd)</strong></li>
-        </ul>
-
-        <h4>Capabilities Enabled</h4>
-        <ul>
-            <li>Remote account wipe</li>
-            <li>Password enforcement</li>
-            <li>Device approval tracking</li>
-        </ul>
+        <div class="docs-title-block">
+            <p class="docs-eyebrow">Google Workspace Lab</p>
+            <h1 id="overview">Reporting & Monitoring</h1>
+            <p class="docs-lead">
+                This section demonstrates how Google Workspace reporting and audit tools were used to monitor user authentication activity, assess account security posture, investigate email delivery, track file activity, and identify potential data exposure risks.
+            </p>
+        </div>
 
         <div class="callout">
-            <strong>Why this matters</strong><br>
-            Provides baseline protection while keeping deployment simple and scalable.
+            <strong>Focus:</strong><br>
+            Real-world administrative visibility and investigation workflows across identity, email, and Drive activity.
         </div>
-    </div>
 
-    <!-- APPLIED -->
-    <div class="section-block">
-        <h2>Configuration Applied</h2>
+        <div class="section-block" id="user-activity-monitoring">
+            <h2>User Activity Monitoring (Audit & Investigation)</h2>
+            <p>
+                The Audit and Investigation tool was used to analyse user authentication activity and review recent user log events.
+            </p>
 
-        <img src="screenshots/11-03-mobile-management-saved.png" alt="Settings applied" loading="lazy">
-        <p class="caption">Settings applied across the organisation</p>
+            <img src="screenshots/12-01-user-log-events.png" alt="User log events" loading="lazy">
+            <p class="caption">Audit and Investigation view showing user log events</p>
 
-        <ul>
-            <li>Mobile management enforced for all users</li>
-            <li>Devices must meet minimum security requirements</li>
-            <li>Administrative visibility enabled</li>
-        </ul>
-    </div>
+            <h3>Observations</h3>
+            <ul>
+                <li>Successful and failed login attempts are visible</li>
+                <li>2-Step Verification events are logged</li>
+                <li>Login types such as password and re-authentication are recorded</li>
+                <li>IP addresses provide useful investigation context</li>
+            </ul>
 
-    <!-- POLICY -->
-    <div class="section-block">
-        <h2>Policy Enforcement (2-Step Verification)</h2>
-
-        <img src="screenshots/11-04-device-blocked-2sv.png" alt="2SV enforcement" loading="lazy">
-        <p class="caption">Access blocked due to missing 2-Step Verification</p>
-
-        <h3>Outcome</h3>
-        <ul>
-            <li>Access automatically blocked</li>
-            <li>User required to enable 2SV</li>
-            <li>Identity-based access control enforced</li>
-        </ul>
-
-        <div class="callout">
-            <strong>Important</strong><br>
-            Device access is tied to identity security — non-compliant users cannot access company data.
+            <div class="callout">
+                <strong>Use case:</strong><br>
+                Useful for investigating suspicious login activity, validating security controls, and reviewing authentication history.
+            </div>
         </div>
-    </div>
 
-    <!-- ENROLMENT -->
-    <div class="section-block">
-        <h2>Device Enrolment</h2>
+        <div class="section-block" id="account-security-posture">
+            <h2>Account Security Posture (User Reports)</h2>
+            <p>
+                User account security status was reviewed across the organisation using the built-in reporting dashboard.
+            </p>
 
-        <img src="screenshots/11-05-device-enrolled.png" alt="Device enrolled" loading="lazy">
-        <p class="caption">Device successfully enrolled after meeting requirements</p>
+            <img src="screenshots/12-02-accounts-report.png" alt="Accounts security report" loading="lazy">
+            <p class="caption">Accounts report showing 2-Step Verification, password posture, and protection status</p>
 
-        <ul>
-            <li>Status: <strong>Approved</strong></li>
-            <li>Ownership: <strong>User-owned (BYOD)</strong></li>
-            <li>Active sync confirms connection</li>
-        </ul>
+            <h3>Key Insights</h3>
+            <ul>
+                <li>2-Step Verification enforcement is enabled</li>
+                <li>Enrolment status varies across users</li>
+                <li>Password compliance is visible per account</li>
+                <li>Protected account status can be reviewed centrally</li>
+            </ul>
 
-        <div class="callout">
-            <strong>Why this matters</strong><br>
-            Ensures only compliant devices can access organisational resources.
+            <div class="callout">
+                <strong>Why this matters:</strong><br>
+                This helps identify users who are not yet enrolled in 2-Step Verification and supports security reviews across the tenant.
+            </div>
         </div>
-    </div>
 
-    <!-- INSPECTION -->
-    <div class="section-block">
-        <h2>Device Inspection</h2>
+        <div class="section-block" id="application-storage-usage">
+            <h2>Application & Storage Usage</h2>
+            <p>
+                Apps usage reporting was used to understand user storage consumption and identify high-usage accounts.
+            </p>
 
-        <img src="screenshots/11-06-device-details.png" alt="Device details" loading="lazy">
-        <p class="caption">Detailed device information in Admin console</p>
+            <img src="screenshots/12-03-apps-usage.png" alt="Apps usage report" loading="lazy">
+            <p class="caption">Apps usage report showing per-user storage consumption</p>
 
-        <h3>Available Information</h3>
-        <ul>
-            <li>Device ID and resource ID</li>
-            <li>Operating system (Android 14)</li>
-            <li>Ownership type</li>
-            <li>Sync timestamps</li>
-            <li>Management level</li>
-        </ul>
+            <h3>Observations</h3>
+            <ul>
+                <li>Usage is broken down by Gmail, Drive, and Photos</li>
+                <li>Total storage consumption can be compared per user</li>
+                <li>Heavy storage users are easy to identify</li>
+                <li>Low-activity or inactive accounts are also visible</li>
+            </ul>
 
-        <h3>Administrative Actions</h3>
-        <ul>
-            <li>Block device access</li>
-            <li>Wipe account data</li>
-            <li>Remove device from management</li>
-            <li>View audit logs</li>
-        </ul>
-    </div>
-
-    <!-- OVERVIEW -->
-    <div class="section-block">
-        <h2>Devices Overview</h2>
-
-        <img src="screenshots/11-01-devices-overview.png" alt="Devices dashboard" loading="lazy">
-        <p class="caption">Centralised device management dashboard</p>
-
-        <ul>
-            <li>Separation of mobile, endpoint, and ChromeOS devices</li>
-            <li>Managed vs unmanaged visibility</li>
-            <li>Centralised policy control</li>
-        </ul>
-    </div>
-
-    <!-- DESIGN -->
-    <div class="section-block">
-        <h2>Design Rationale</h2>
-
-        <ul>
-            <li><strong>Basic MDM</strong> reduces complexity while maintaining control</li>
-            <li><strong>2-Step Verification</strong> enforces strong identity security</li>
-            <li><strong>BYOD support</strong> allows flexible working while maintaining governance</li>
-        </ul>
-    </div>
-
-    <!-- VALIDATION -->
-    <div class="section-block">
-        <h2>Validation</h2>
-
-        <ul>
-            <li>Non-compliant devices are blocked</li>
-            <li>Compliant devices enrol successfully</li>
-            <li>Device status updates in real time</li>
-            <li>Admin actions function correctly</li>
-        </ul>
-    </div>
-
-    <!-- REAL WORLD -->
-    <div class="section-block">
-        <h2>Real-World Considerations</h2>
-
-        <ul>
-            <li>Advanced MDM required for company-owned devices</li>
-            <li>BYOD environments rely heavily on identity controls</li>
-            <li>Device lifecycle processes must include onboarding and offboarding</li>
-            <li>Policies should scale with organisational growth</li>
-        </ul>
-    </div>
-
-    <!-- SUMMARY -->
-    <div class="section-block">
-        <h2>Summary</h2>
-
-        <ul>
-            <li>Device management successfully implemented</li>
-            <li>Identity and device security integrated</li>
-            <li>Policies validated through real-world testing</li>
-            <li>Centralised administrative control established</li>
-        </ul>
-
-        <div class="callout">
-            This configuration provides a secure and scalable approach to managing user devices in Google Workspace.
+            <div class="callout">
+                <strong>Administrative value:</strong><br>
+                Useful for capacity planning, identifying unusual usage patterns, and reviewing account activity.
+            </div>
         </div>
-    </div>
 
+        <div class="section-block" id="email-investigation">
+            <h2>Email Investigation (Email Log Search)</h2>
+            <p>
+                Email Log Search was used to trace a test message between users by filtering on sender, recipient, and date range.
+            </p>
+
+            <img src="screenshots/12-04-email-log-search.png" alt="Email log search" loading="lazy">
+            <p class="caption">Email Log Search used to locate specific messages</p>
+
+            <h3>Action Performed</h3>
+            <ul>
+                <li>Filtered by sender address</li>
+                <li>Filtered by recipient address</li>
+                <li>Used a date range to narrow results</li>
+                <li>Located specific test emails for inspection</li>
+            </ul>
+        </div>
+
+        <div class="section-block" id="email-message-trace">
+            <h2>Email Message Trace</h2>
+            <p>
+                After identifying a message, detailed inspection was used to validate delivery and mail flow.
+            </p>
+
+            <img src="screenshots/12-05-email-log-detail.png" alt="Email log message details" loading="lazy">
+            <p class="caption">Detailed message trace showing delivery pipeline and recipient status</p>
+
+            <h3>Insights</h3>
+            <ul>
+                <li>Message delivery status is visible</li>
+                <li>Message ID and timestamp are recorded</li>
+                <li>Mail flow stages can be reviewed step by step</li>
+                <li>Final delivery to the recipient mailbox is confirmed</li>
+            </ul>
+
+            <div class="callout">
+                <strong>Use case:</strong><br>
+                This supports troubleshooting for delayed, missing, or disputed email delivery.
+            </div>
+        </div>
+
+        <div class="section-block" id="drive-activity-monitoring">
+            <h2>Drive Activity Monitoring</h2>
+            <p>
+                Drive audit logs were reviewed to track document activity, sharing changes, and file movement.
+            </p>
+
+            <img src="screenshots/12-06-drive-log-events-overview.png" alt="Drive log events overview" loading="lazy">
+            <p class="caption">Drive log events overview showing recent document activity</p>
+
+            <h3>Observations</h3>
+            <ul>
+                <li>File creation, copying, movement, and sharing activity is logged</li>
+                <li>Visibility changes are visible in audit data</li>
+                <li>Document titles, actors, and timestamps are recorded</li>
+                <li>The log supports investigation of file lifecycle events</li>
+            </ul>
+        </div>
+
+        <div class="section-block" id="external-sharing-investigation">
+            <h2>External Sharing Investigation</h2>
+            <p>
+                Filters were applied to isolate files that had been shared externally and investigate possible data exposure.
+            </p>
+
+            <img src="screenshots/12-07-drive-log-external-sharing-filtered.png" alt="Drive log filtered for external sharing" loading="lazy">
+            <p class="caption">Filtered Drive log showing externally shared files and related events</p>
+
+            <h3>Findings</h3>
+            <ul>
+                <li>Files shared outside the organisation were identified quickly</li>
+                <li>Permission changes and access events were visible</li>
+                <li>Actors and timestamps were clearly recorded</li>
+                <li>Potential data leakage events could be reviewed end to end</li>
+            </ul>
+
+            <div class="callout">
+                <strong>Security impact:</strong><br>
+                This provides the visibility needed to investigate who shared a file, when it happened, and what exposure may have occurred.
+            </div>
+        </div>
+
+        <div class="section-block" id="key-security-capabilities">
+            <h2>Key Security Capabilities Demonstrated</h2>
+            <ul>
+                <li>Centralised audit logging across multiple Google Workspace services</li>
+                <li>Correlation of identity, email, and file activity</li>
+                <li>Visibility into authentication and access behaviour</li>
+                <li>Support for real-world incident investigation workflows</li>
+            </ul>
+        </div>
+
+        <div class="section-block" id="validation">
+            <h2>Validation</h2>
+            <ul>
+                <li>Login activity and 2-Step Verification events were logged in real time</li>
+                <li>Account security posture was visible across all users</li>
+                <li>Email delivery could be traced end to end</li>
+                <li>Drive activity and sharing changes were fully auditable</li>
+                <li>External sharing activity could be filtered and investigated</li>
+            </ul>
+        </div>
+
+        <div class="section-block" id="real-world-considerations">
+            <h2>Real-World Considerations</h2>
+            <ul>
+                <li>Audit data should be reviewed regularly</li>
+                <li>High-risk actions should be paired with alerting rules</li>
+                <li>Long-term retention may be needed for compliance requirements</li>
+                <li>Export or SIEM integration can improve wider security monitoring</li>
+            </ul>
+        </div>
+
+        <div class="section-block" id="summary">
+            <h2>Summary</h2>
+            <ul>
+                <li>Authentication activity was monitored through audit logs</li>
+                <li>Account security posture was reviewed centrally</li>
+                <li>Email delivery was traced using Email Log Search</li>
+                <li>Drive activity and external sharing were investigated successfully</li>
+                <li>Reporting tools provided practical operational and security visibility</li>
+            </ul>
+
+            <div class="callout">
+                This section demonstrates how Google Workspace reporting features can support both day-to-day administration and security investigation workflows.
+            </div>
+        </div>
+
+    </main>
 </section>
 
 <footer>
