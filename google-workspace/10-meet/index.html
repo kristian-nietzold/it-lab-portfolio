@@ -1,0 +1,103 @@
+# 10. Google Meet
+
+## Overview
+
+This section demonstrates the configuration of Google Meet to provide secure,
+controlled, and scalable communication across the organisation.
+
+The implementation focuses on:
+
+- Secure meeting access and participant control  
+- Host moderation and governance  
+- Safe collaboration with internal and external users  
+- Support for hybrid working environments  
+
+---
+
+## Meet Safety Settings
+
+Google Meet safety settings were configured at the organisational level to ensure
+consistent behaviour across all meetings.
+
+![Meet safety settings](screenshots/10-01-meet-safety-settings.png)
+
+### Configuration
+
+- Meeting access: **Allowed (including external meetings)**  
+- Access type: **Trusted (domain-aware access control)**  
+
+- Waiting rooms: **Enabled (lobby control enforced)**  
+- Host management: **Enabled by default**  
+
+- External participant warning: **Enabled**  
+- Incoming call restrictions: **Limited to organisation and contacts**  
+
+- Screen sharing: **Enabled for all users**  
+- Chat, Polls, Q&A: **Enabled**  
+- Continuous meeting chat: **Enabled (host-controlled)**  
+
+- Room check-in: **Enabled (for physical meeting spaces)**  
+
+- Meet Media API: **Enabled (supports third-party integrations)**  
+
+---
+
+## Design Rationale
+
+The configuration balances usability with security:
+
+- **Waiting rooms**
+  - Prevent unauthorised access
+  - Ensure hosts approve participants before entry  
+
+- **Host management**
+  - Gives hosts full control over meetings  
+  - Allows muting, removing users, and restricting actions  
+
+- **Trusted access model**
+  - Allows external collaboration while maintaining control  
+  - Reduces friction for legitimate business meetings  
+
+- **External participant warnings**
+  - Improves awareness of potential risk  
+  - Helps prevent accidental data exposure  
+
+- **Collaboration features (chat, polls, Q&A)**
+  - Improve meeting engagement and productivity  
+
+---
+
+## Validation
+
+The configuration was tested to ensure:
+
+- External users are placed in waiting rooms when required  
+- Hosts must approve participant access  
+- External users are clearly labelled in meetings  
+- Host controls function correctly (mute/remove/restrict actions)  
+- Meeting features behave consistently across users  
+
+---
+
+## Real-World Considerations
+
+- High-security environments may:
+  - Restrict external access completely  
+  - Disable screen sharing for non-hosts  
+
+- Host management should always be enforced  
+- Policies should align with organisational data protection requirements  
+- Integration with Google Calendar enables seamless scheduling and joining  
+
+---
+
+## Summary
+
+This section demonstrates:
+
+- Centralised Google Meet policy configuration  
+- Secure meeting access and moderation controls  
+- Controlled external collaboration  
+- Support for hybrid workplace communication  
+
+These configurations ensure meetings are secure, manageable, and scalable.
