@@ -1,14 +1,30 @@
 ---
 ---
 
+@import "minima";
+
+/* Hide top navigation / weird list */
 .site-header {
   display: none;
 }
 
-.site-title {
+/* Hide any stray list that appears at top */
+.page-content > ul:first-of-type {
   display: none;
 }
 
-.page-header {
-  display: none;
+/* Clean layout */
+.page-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Better headings */
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  margin-top: 40px;
 }
